@@ -1,0 +1,15 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/NewMaterial-leaves-shader.shader">
+    <Files>
+      <File FileName="Assets/KubeShader.shader" Line="74" Column="14" />
+      <File FileName="Assets/NewMaterial-leaves-shader.shader" Line="59" Column="1" />
+      <File FileName="../../../Downloads/builtin_shaders-2018.1.2f1/DefaultResourcesExtra/Nature/TreeCreator/TreeCreatorBark.shader" Line="50" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
