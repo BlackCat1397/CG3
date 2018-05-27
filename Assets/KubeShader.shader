@@ -1,4 +1,6 @@
-﻿Shader "Unlit/KubeShader"
+﻿// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
+
+Shader "Unlit/KubeShader"
 {
     Properties
     {
@@ -54,7 +56,7 @@
                 v2f o;
                 o.vertex = UnityObjectToClipPos(v.vertex);
                 o.uv = TRANSFORM_TEX(v.uv, _MainTex);
-                o.posWorld = mul(_Object2World, v.vertex);
+                o.posWorld = mul(unity_ObjectToWorld, v.vertex);
                 o.wN = UnityObjectToWorldNormal(normal);
                 return o;
             }
@@ -64,7 +66,7 @@
                 float cameraDist = length(i.posWorld.xyz - _WorldSpaceCameraPos.xyz);
                 fixed4 c = 0;
                 float f = (_FogEnd - cameraDist)/(_FogEnd - _FogStart);
-                f = pow(2.7182818285, pow(-cameraDist*_Density, 2));
+                f = pow(2.7182818285, -1*pow(cameraDist*_Density, 2));
                 f = f>=0?(f<=1?f:1):0;
                 c.rgb = (1-f)*_ClearColor + f*_Color;
                 return c;
